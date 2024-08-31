@@ -10,6 +10,15 @@ import numpy as np
 def run(L,X,y):
     n, d = X.shape
     alpha = np.zeros((n,))
-    iter = 0
-    # Your code goes here
+    for iter in range(L):
+        all_points_classified_correctly = True
+        for i in range(n):
+            inner_sum = 0
+            for j in range(n):
+                inner_sum += (alpha[j] * y[j] * K.run(X[j], X[i]))
+            if y[i] * inner_sum <= 0:
+                alpha[i] += 1
+                all_points_classified_correctly = False
+        if all_points_classified_correctly:
+            break
     return alpha, iter+1
