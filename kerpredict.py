@@ -1,3 +1,4 @@
+# COMP90051 (2024 S2) Trevor Adelson (tadelson@student.unimelb.edu.au) 693698
 import K
 import numpy as np
 # Input: numpy vector alpha, with n entries

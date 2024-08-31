@@ -1,3 +1,4 @@
+# COMP90051 (2024 S2) Trevor Adelson (tadelson@student.unimelb.edu.au) 693698
 import numpy as np
 # Input: scalar C
 #        number of iterations L
