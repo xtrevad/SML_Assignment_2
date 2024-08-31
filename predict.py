@@ -4,5 +4,8 @@ import numpy as np
 # Output: label (+1 or -1)
 def run(w,z):
     label = -1.
-    # Your code goes here
+    if (w @ z) > 0:
+        label = 1
+    else: 
+        label = -1
     return label
