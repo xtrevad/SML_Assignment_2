@@ -9,5 +9,10 @@ import numpy as np
 def run(C,L,X,y):
     n, d = X.shape
     w = np.zeros((d,))
-    # Your code goes here
+    for iter in range(L):
+        grad = w
+        for i in range(n):
+            if (1 - y[i] * (w @ X[i])) > 0: # Check hinge loss; if > 0, then update gradient
+                grad = grad - C * y[i] * X[i]
+        w = w - grad/(iter + 1)
     return w
